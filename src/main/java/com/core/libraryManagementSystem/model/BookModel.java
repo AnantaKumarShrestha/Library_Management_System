@@ -15,7 +15,8 @@ public class BookModel {
     private UUID id;
     private String name;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "authorId")
     private List<AuthorModel> authors;
 
     private String photo;
