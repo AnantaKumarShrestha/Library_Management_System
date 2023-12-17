@@ -1,7 +1,7 @@
 package com.core.libraryManagementSystem.mapper;
 
 import com.core.libraryManagementSystem.dto.BookDto;
-import com.core.libraryManagementSystem.model.Book;
+import com.core.libraryManagementSystem.model.BookModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -9,7 +9,7 @@ import org.mapstruct.factory.Mappers;
 public interface BookMapper {
 
     BookMapper INSTANCE = Mappers.getMapper(BookMapper.class);
-    BookDto bookModelIntoBookDto(Book book);
-    Book bookDtoIntoBookModel(BookDto bookDto);
+    BookDto bookModelIntoBookDto(BookModel book);
+    BookModel bookDtoIntoBookModel(BookDto bookDto);
 
 }

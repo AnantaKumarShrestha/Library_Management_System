@@ -1,7 +1,7 @@
 package com.core.libraryManagementSystem.mapper;
 
 import com.core.libraryManagementSystem.dto.AuthorDto;
-import com.core.libraryManagementSystem.model.Author;
+import com.core.libraryManagementSystem.model.AuthorModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -9,7 +9,7 @@ import org.mapstruct.factory.Mappers;
 public interface AuthorMapper {
 
     AuthorMapper INSTANCE= Mappers.getMapper(AuthorMapper.class);
-    AuthorDto authorModelIntoAuthorDto(Author author);
-    Author authorDtoIntoAuthorModel(AuthorDto authorDto);
+    AuthorDto authorModelIntoAuthorDto(AuthorModel author);
+    AuthorModel authorDtoIntoAuthorModel(AuthorDto authorDto);
 
 }

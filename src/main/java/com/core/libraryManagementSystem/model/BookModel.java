@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Book {
+public class BookModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,7 +17,7 @@ public class Book {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "authorId")
-    private List<Author> authors;
+    private List<AuthorModel> authors;
 
     private String photo;
     private String type;

@@ -1,7 +1,7 @@
 package com.core.libraryManagementSystem.mapper;
 
 import com.core.libraryManagementSystem.dto.StudentDto;
-import com.core.libraryManagementSystem.model.Student;
+import com.core.libraryManagementSystem.model.StudentModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -10,8 +10,8 @@ public interface StudentMapper {
 
   StudentMapper INSTANCE= Mappers.getMapper(StudentMapper.class);
 
-  StudentDto studentModelIntoStudentDto(Student student);
-  Student studentDtoIntoStudentModel(StudentDto studentDto);
+  StudentDto studentModelIntoStudentDto(StudentModel student);
+  StudentModel studentDtoIntoStudentModel(StudentDto studentDto);
 
 
 }
