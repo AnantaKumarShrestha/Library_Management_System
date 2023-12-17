@@ -1,13 +1,13 @@
 package com.core.libraryManagementSystem.mapper;
 
 import com.core.libraryManagementSystem.dto.AddressDto;
-import com.core.libraryManagementSystem.model.AddressModel;
+import com.core.libraryManagementSystem.model.Address;
 import org.mapstruct.Mapper;
 
 @Mapper
 public interface AddressMapper {
 
-    AddressModel addressDtoIntoAddressModel(AddressDto addressDto);
-    AddressDto addressModelIntoAddressDto(AddressModel address);
+    Address addressDtoIntoAddressModel(AddressDto addressDto);
+    AddressDto addressModelIntoAddressDto(Address address);
 
 }

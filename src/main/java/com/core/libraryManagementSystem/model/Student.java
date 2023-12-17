@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class StudentModel {
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,11 +24,11 @@ public class StudentModel {
 
 
     @OneToOne(cascade = CascadeType.ALL)
-    private AddressModel address;
+    private Address address;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "booksId")
-    private List<BookModel> books;
+    private List<Book> books;
 
 
 
