@@ -1,7 +1,7 @@
 package com.core.libraryManagementSystem.dto;
 
-import com.core.libraryManagementSystem.model.Address;
-import com.core.libraryManagementSystem.model.Book;
+import com.core.libraryManagementSystem.model.AddressModel;
+import com.core.libraryManagementSystem.model.BookModel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +19,6 @@ public class StudentDto {
     private String email;
     private String phone;
     private LocalDate accOpenDate;
-    private Address address;
-    private List<Book> books;
+    private AddressModel address;
+    private List<BookModel> books;
 }

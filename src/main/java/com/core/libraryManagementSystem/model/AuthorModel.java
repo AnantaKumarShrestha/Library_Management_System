@@ -10,13 +10,11 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Address {
+public class AuthorModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-    private String city;
-    private String area;
-
+    private String authorName;
 
 }

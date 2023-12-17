@@ -1,5 +1,6 @@
 package com.core.libraryManagementSystem.model;
 
+import com.core.libraryManagementSystem.Encryption.EncryptorDecryptor;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
@@ -10,13 +11,17 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Student {
+public class StudentModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String name;
+
+    @Convert(converter = EncryptorDecryptor.class)
     private String email;
+
+    @Convert(converter = EncryptorDecryptor.class)
     private String phone;
 
     @CreatedDate
@@ -24,11 +29,11 @@ public class Student {
 
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Address address;
+    private AddressModel address;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "booksId")
-    private List<Book> books;
+    private List<BookModel> books;
 
 
 
