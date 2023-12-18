@@ -11,6 +11,7 @@ import java.util.UUID;
 
 @Data
 @Entity
+@Table(name = "student_table")
 public class StudentModel {
 
     @Id

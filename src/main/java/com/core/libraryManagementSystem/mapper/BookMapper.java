@@ -5,6 +5,8 @@ import com.core.libraryManagementSystem.model.BookModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface BookMapper {
 
@@ -12,4 +14,5 @@ public interface BookMapper {
     BookDto bookModelIntoBookDto(BookModel book);
     BookModel bookDtoIntoBookModel(BookDto bookDto);
 
+    List<BookDto> bookModeIntoBookDtoList(List<BookModel> bookModelList);
 }
