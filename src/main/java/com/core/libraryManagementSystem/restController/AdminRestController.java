@@ -21,9 +21,14 @@ public class AdminRestController {
     @Autowired
     private StudentService studentService;
 
+//    @PostMapping("/book")
+//    public ResponseEntity<BookDto> addBook(@RequestBody BookDto bookDto){
+//        return new ResponseEntity<>(bookService.addBook(bookDto), HttpStatus.CREATED);
+//    }
+
     @PostMapping("/book")
-    public ResponseEntity<BookDto> addBook(@RequestBody BookDto bookDto){
-        return new ResponseEntity<>(bookService.addBook(bookDto), HttpStatus.CREATED);
+    public BookDto addBook(@RequestBody BookDto bookDto){
+        return bookService.addBook(bookDto);
     }
 
     @GetMapping("/books")

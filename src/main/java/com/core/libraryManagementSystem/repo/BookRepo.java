@@ -16,7 +16,10 @@ public interface BookRepo extends JpaRepository<BookModel, UUID> {
     @Query( name = "availableBooks")
     List<BookModel> getBooksAvailableInLibrary();
 
-    @Query(name = "checkoutBooks")
+//    @Query(name = "checkoutBooks")
+//    List<BookModel> getCheckoutBooks();
+
+    @Query("select b.id,b.name,b.available from BookModel b where b.available > 0 order by b.available asc")
     List<BookModel> getCheckoutBooks();
 
 }
